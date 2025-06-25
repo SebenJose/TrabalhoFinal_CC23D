@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Final CC23D - Simulação de Memória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="menu-screen">
+        <div id="menu-header-bar">
+            <div class="header-title">Trabalho Final - CC23D - Arquitetura e Organização de Computadores</div>
+            <div class="header-subtitle">Aluno: José Carlos Seben de Souza Leite &nbsp; RA: 2651130</div>
+        </div>
+        <p class="menu-description">
+            Trabalho desenvolvido para conclusão da disciplina de Arquitetura e Organização de Computadores, onde
+            utilizando uma simulação de Overlay pronta, fiz algumas melhorias e adicionei uma função de paginação.
+        </p>
+        <div class="menu-buttons">
+            <button id="overlay-menu-btn">Overlay</button>
+            <button id="pagination-menu-btn">Paginação</button>
+        </div>
+    </div>
+
+
+    <div id="simulation-screen-overlay" style="display: none;">
+        <header>
+            <h1>Simulação - Overlay</h1>
+        </header>
+
+        <main>
+            <section class="box-container">
+                <div class="box-wrapper" data-index="1"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                <div class="box-wrapper" data-index="2"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                <div class="box-wrapper" data-index="3"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                <div class="box-wrapper" data-index="4"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+            </section>
+
+            <div class="button-container">
+                <button class="simulation-btn">Iniciar Simulação</button>
+                <button class="reload-btn" style="display: none;">🔄️</button>
+            </div>
+
+            <section class="process-lists">
+                <div class="process-column">
+                    <h2>Próximos Processos</h2>
+                    <ul class="process-list"></ul>
+                </div>
+                <div class="process-column">
+                    <h2>Processos Finalizados</h2>
+                    <ul class="process-list"></ul>
+                </div>
+            </section>
+            <button class="back-button">Voltar ao Menu</button>
+        </main>
+    </div>
+
+    <div id="simulation-screen-pagination" style="display: none;">
+        <header>
+            <h1>Simulação - Paginação de Memória</h1>
+        </header>
+
+        <main>
+            <section class="box-container">
+                 <div class="box-wrapper" data-index="1"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                 <div class="box-wrapper" data-index="2"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                 <div class="box-wrapper" data-index="3"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+                 <div class="box-wrapper" data-index="4"><div class="box"><div class="progress"></div></div><div class="box-label-container"><div class="box-label">Espaço Livre</div></div></div>
+            </section>
+
+            <div class="button-container">
+                <button class="simulation-btn">Iniciar Simulação</button>
+                <button class="reload-btn" style="display: none;">🔄️</button>
+            </div>
+
+            <section class="process-lists three-columns">
+                <div class="process-column">
+                    <h2>Fila</h2>
+                    <ul class="process-list"></ul>
+                </div>
+                <div class="process-column">
+                    <h2>Ativas</h2>
+                    <ul class="process-list"></ul>
+                </div>
+                <div class="process-column">
+                    <h2>Concluídas</h2>
+                    <ul class="process-list"></ul>
+                </div>
+            </section>
+            <button class="back-button">Voltar ao Menu</button>
+        </main>
+    </div>
+
+    <script src="Scripts.js" defer></script>
+</body>
+
+</html>
