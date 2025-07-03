@@ -193,7 +193,7 @@ function criarSimulacao(config) {
         if (config.usarEnderecamento) {
             const enderecoInicio = estado.proximoEnderecoLivre;
             const enderecoFim = enderecoInicio + TAMANHO_PAGINA - 1;
-            processo.endereco = `${enderecoInicio} - ${enderecoFim}`;
+            processo.endereco = `${enderecoInicio} - ${enderecoFim}`; //Adiciona o endereço de memória
             estado.proximoEnderecoLivre += TAMANHO_PAGINA;
         }
         estado.fila.push(processo);
@@ -277,11 +277,11 @@ function criarSimulacao(config) {
     function obterRepeticoes(nomeProcesso) {
         switch (nomeProcesso) {
             case 'Processo Principal': return 1; case 'Subrotina 1': return 3;
-            case 'Subrotina 2': return 5; case 'Subrotina 3': return 3;
-            case 'Subrotina 4': return 4; case 'Subrotina 5': return 5;
-            case 'Subrotina 6': return 4; case 'Subrotina 7': return 3;
-            case 'Subrotina 8': return 3; case 'Subrotina 9': return 4;
-            case 'Subrotina 10': return 4; default: return 1;
+            case 'Subrotina 2': return 3; case 'Subrotina 3': return 3;
+            case 'Subrotina 4': return 1; case 'Subrotina 5': return 2;
+            case 'Subrotina 6': return 4; case 'Subrotina 7': return 2;
+            case 'Subrotina 8': return 3; case 'Subrotina 9': return 3;
+            case 'Subrotina 10': return 3; default: return 1;
         }
     }
 
